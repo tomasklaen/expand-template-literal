@@ -1,6 +1,6 @@
 export class TemplateError extends Error {}
 
-export function expandTemplateLiteral(template: string, variables: Record<string, any> = {}) {
+export function expandTemplateLiteral(template: string, variables: Record<string, any> = {}): string {
 	try {
 		/**
 		 * Can't use `with` statement, as it's disabled in strict mode :(, and
@@ -12,7 +12,7 @@ export function expandTemplateLiteral(template: string, variables: Record<string
 				.map((name) => `const ${name} = variables['${name}'];`)
 				.join('')}
 			return \`${template}\`;
-		})()`);
+		})()`) as string;
 	} catch (error) {
 		throw new TemplateError((error as any)?.message);
 	}
