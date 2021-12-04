@@ -1,6 +1,6 @@
 {
 	"name": "expand-template-literal",
-	"version": "1.0.2",
+	"version": "1.0.3",
 	"description": "Expand template literals supplied as strings.",
 	"homepage": "https://github.com/tomasklaen/expand-template-literal",
 	"bugs": "https://github.com/tomasklaen/expand-template-literal/issues",
